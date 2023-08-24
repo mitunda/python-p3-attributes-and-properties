@@ -10,7 +10,6 @@ APPROVED_BREEDS = [
     "Pug",
     "Pointer"
 ]
-
 class Dog:
     def __init__(self, name="Unknown", breed="Unknown"):
         self._name = None
@@ -38,12 +37,6 @@ class Dog:
         if value in APPROVED_BREEDS:
             self._breed = value
         else:
-            print("Breed must bein list of approved breeds.")
-    
-    def name_invalid(self):
-        return not (isinstance(self._name, str) and 1 <= len(self._name) <= 25)
-    
-    def breed_invalid(self):
-        return self._breed not in APPROVED_BREEDS
+            print("Breed must be in list of approved breeds.")
 
 
